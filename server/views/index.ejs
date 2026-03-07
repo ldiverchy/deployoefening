@@ -1,0 +1,11 @@
+<h2>Nieuwsartikelen</h2>
+
+<ul>
+<% news.forEach(article => { %>
+  <li>
+    <a href="/<%= article.slug %>">
+      <%= article.title %>
+    </a>
+  </li>
+<% }) %>
+</ul>

@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express";
 import path from "path";
+import { getNews, getNewsBySlug, addNews } from "./data/newsService";
 
 const router = express.Router();
 
@@ -7,12 +8,16 @@ const router = express.Router();
  * GET / - Laadt de homepagina
  */
 
-router.get("/", (req: Request, res: Response): void => {
-  res.sendFile(path.join(__dirname, "views", "index.html"));
+router.get("/", (req, res) => {
+  const news = getNews();
+  res.render("index", {
+  title: "News",
+  news
+});
 });
 
 router.get("/details", (req: Request, res: Response): void => {
-    res.sendFile(path.join(__dirname, "views", "details.html"));
+  res.render("details", { title: "Details" });
 });
 
 export default router;
