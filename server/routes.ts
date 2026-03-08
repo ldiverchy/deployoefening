@@ -16,8 +16,17 @@ router.get("/", (req, res) => {
 });
 });
 
-router.get("/details", (req: Request, res: Response): void => {
-  res.render("details", { title: "Details" });
+router.get("/:slug", (req, res) => {
+  const article = getNewsBySlug(req.params.slug);
+
+  if (!article) {
+    return res.status(404).send("Article not found");
+  }
+
+  res.render("article", {
+    title: article.title,
+    article
+  });
 });
 
 export default router;

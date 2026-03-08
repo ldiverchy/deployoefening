@@ -1,5 +1,85 @@
+@import url(reset.css);
+
 body {
-    font-family: Arial, sans-serif;
-    max-width: 1000px;
-    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding-top: 1rem;
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+
+    & h1 {
+        font-size: 4rem;
+        font-weight: 600;
+        color: rgb(15, 8, 50);
+        text-decoration: underline #00bfff 6px;
+        text-underline-offset: 0.75rem;
+    }
+}
+
+main {
+    padding-left: 2.5rem;
+
+    & h1 {
+        font-size: 3rem;
+        margin-bottom: -0.5rem;
+    }
+
+    & h2 {
+        font-size: 2.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    & .date {
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+    }
+
+    & .content {
+        font-size: 1.75rem;
+        margin-bottom: 5rem;
+    }
+}
+
+ul {
+    display: flex;
+    gap: 2rem;
+}
+
+li {
+    list-style-type: none;
+    background: #00BFFF;
+background: linear-gradient(135deg,rgba(0, 191, 255, 1) 0%, rgba(9, 139, 219, 1) 100%);
+    padding: 1.5rem 2rem 1rem;
+    border-radius: 0.5rem;
+    width: 30rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 15px 25px 5px rgba(5, 52, 67, 0.252);  
+
+    & a {
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+        line-height: 1.25;
+    }
+
+    & .date {
+        color: white;
+        font-size: 1.5rem;
+    }
+}
+
+.back-button {
+    background: #00BFFF;
+    background: linear-gradient(135deg,rgba(0, 191, 255, 1) 0%, rgba(9, 139, 219, 1) 100%);
+    color: white;
+    padding: 1rem 1.25rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    box-shadow: 0px 5px 15px 2px rgba(5, 52, 67, 0.252);  
+    border-radius: 0.5rem;
 }

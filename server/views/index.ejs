@@ -1,4 +1,4 @@
-<h2>Nieuwsartikelen</h2>
+<h2>Recent nieuws</h2>
 
 <ul>
 <% news.forEach(article => { %>
@@ -6,6 +6,7 @@
     <a href="/<%= article.slug %>">
       <%= article.title %>
     </a>
+    <p class="date"><%= article.date %></p>
   </li>
 <% }) %>
 </ul>
